@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Hotel</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover,.slick-prev:hover,.slick-next:hover {
+            background-color: #555;
+}
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        #search-bar {
+            border: none;
+            background-color: #555;
+            border-radius: 15px;
+            padding: 10px;
+            color: #f4f4f4;
+        }
+        /* New styles for the carousel and columns */
+        #image-slider {
+            width: 80%;
+            margin: auto;
+        }
+
+        #image-slider img {
+            max-width: 100%;
+            max-height: 3000px; /* Adjust the max-height as needed */
+            height: auto;
+            margin: auto;
+        }
+
+        #about-columns {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .column {
+            flex: 0 1 calc(33.33% - 20px);
+            margin: 10px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+  <header>
+    <h1>Your Hotel</h1>
+    <nav>
+        <a href="#">Stay with Us</a>
+        <a href="#">Restaurants</a>
+        <a href="#">Spa Facilities</a>
+        <a href="#">Weddings</a>
+        <div class="dropdown">
+            <a href="#">Discovery</a>
+            <div class="dropdown-content">
+                <a href="#">Natural Surroundings</a>
+                <a href="#">Where to Visit</a>
+                <a href="#">Take a Tour</a>
+            </div>
+        </div>
+        <input type="text" id="search-bar" placeholder="Search">
+        <a href="#">Contact Us</a>
+    </nav>
+</header>
+    <section>
+        <div id="image-slider">
+            <!-- Add your images here with the 'slick-slide' class -->
+            <div class="slick-slide"><img src="./one.jfif" alt="Hotel Image 1"></div>
+            <div class="slick-slide"><img src="./two.jfif" alt="Hotel Image 2"></div>
+            <div class="slick-slide"><img src="./three.jfif" alt="Hotel Image 3"></div>
+            <!-- Add more images as needed -->
+        </div>
+
+        <div id="about-columns">
+            <div class="column">
+                <h2>About Our Hotel</h2>
+                <p>The hotel has a modern feel, and everything is well-maintained. The rooms are spacious, and the beds are comfortable, ensuring a good night's sleep</p>
+            </div>
+            <div class="column">
+                <h2>Luxurious Amenities</h2>
+                <p>This includes everything from luxurious linens and bedding to spa-quality toiletries and designer bathrobes. Some hotels even offer amenities like private balconies, fireplaces, and in-room hot tubs, providing guests with a truly unforgettable experience.</p>
+            </div>
+            <div class="column">
+                <h2>Exceptional Service</h2>
+                <p>This includes 24*7 room service, parking facilities, bar, game zones, room delivery,casinos for our customers.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+      &copy; 2024 Your Hotel | Designed by Candidate Number : 10087161
+  </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+       $(document).ready(function(){
+            $('#image-slider').slick({
+                dots: true,
+                autoplay: true,
+                autoplaySpeed: 2000
+            });
+        });
+    </script>
+</body>
+</html>
